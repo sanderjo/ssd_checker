@@ -1,6 +1,6 @@
 # SSD Checker
 
-A simple, cross platform Solid-state drive checker.
+A simple, cross platform solid-state drive checker.
 
 Works on Windows, macOS and Linux.
 
