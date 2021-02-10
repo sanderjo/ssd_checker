@@ -7,16 +7,15 @@ import codecs
 from setuptools import setup
 
 setup(
-    name='ssd',
+    name='ssd-checker',
     version=open('VERSION').read().strip(),
-    description='Solid-State Drive Checker',
+    description='Solid-state drive (ssd) checker',
     long_description=codecs.open(
         'README.rst', encoding='utf-8', errors='ignore').read(),
-    keywords='ssd pyssd',
-    url='https://github.com/vuolter/pySSD',
-    download_url='https://github.com/vuolter/pySSD/releases',
-    author='Walter Purcaro',
-    author_email='vuolter@gmail.com',
+    keywords='ssd check checker solid state drive pyssd',
+    url='https://github.com/kipodd/ssd_checker',
+    download_url='https://github.com/kipodd/ssd_checker/releases',
+    author='kipodd',
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',

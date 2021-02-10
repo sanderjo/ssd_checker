@@ -1,5 +1,5 @@
-pySSD
-=====
+SSD Checker
+===========
 
 Table of contents
 -----------------
@@ -40,7 +40,7 @@ If the above commands fail, consider installing it with the option
 
 If in your system missing the command ``pip``, but you're sure you have
 installed the `Python Interpreter`_ and the package ``setuptools``
-(>=20.8.1), you can try to install **pySSD** from the sources, in this
+(>=20.8.1), you can try to install **SSD Checker** from the sources, in this
 way:
 
 1. Get the latest tarball of the source code in format `ZIP`_ or `TAR`_.
@@ -65,12 +65,10 @@ located, was recognized as SSD, otherwise ``False``.
 
     **Note:** Ramdisks are always recognized as SSD under Windows.
 
-*That's All Folks!*
-
 .. _Description: #description
 .. _Installation: #installation
 .. _Usage: #usage
 .. _--user: https://pip.pypa.io/en/latest/user_guide/#user-installs
 .. _Python Interpreter: https://www.python.org
-.. _ZIP: https://github.com/vuolter/pySSD/archive/master.zip
-.. _TAR: https://github.com/vuolter/pySSD/archive/master.tar.gz
+.. _ZIP: https://github.com/kipodd/ssd_checker/archive/master.zip
+.. _TAR: https://github.com/kipodd/ssd_checker/archive/master.tar.gz
