@@ -22,21 +22,21 @@ Type in your command shell **with *administrator/root* privileges**:
 
 ::
 
-    pip install ssd
+    pip install ssd_checker
 
 In Unix-based systems, this is generally achieved by superseding the
 command ``sudo``.
 
 ::
 
-    sudo pip install ssd
+    sudo pip install ssd_checker
 
 If the above commands fail, consider installing it with the option
 `--user`_:
 
 ::
 
-    pip install --user ssd
+    pip install --user ssd_checker
 
 If in your system missing the command ``pip``, but you're sure you have
 installed the `Python Interpreter`_ and the package ``setuptools``
@@ -51,12 +51,12 @@ way:
 Usage
 -----
 
-Import in your script the module ``sdd`` and call its function
+Import in your script the module ``sdd_checker`` and call its function
 ``is_ssd``.
 
 ::
 
-    from ssd import is_ssd
+    from ssd_checker import is_ssd
 
     is_ssd('/path/to/file-or-dir-or-dev')
 

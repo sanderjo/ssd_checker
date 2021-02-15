@@ -7,7 +7,7 @@ import codecs
 from setuptools import setup
 
 setup(
-    name='ssd-checker',
+    name='ssd_checker',
     version=open('VERSION').read().strip(),
     description='Solid-state drive (ssd) checker',
     long_description=codecs.open(
@@ -41,7 +41,7 @@ setup(
         'Topic :: System :: Filesystems',
         'Topic :: Utilities'],
     platforms=['any'],
-    py_modules=['ssd'],
+    py_modules=['ssd_checker'],
     include_package_data=True,
     install_requires=[
         'psutil;os_name!="nt"',
