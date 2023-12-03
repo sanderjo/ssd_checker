@@ -102,18 +102,6 @@ def is_osx_ssd(path):
     return flag
 
 
-def OLD_is_posix_ssd(path):
-    block = _blkdevice(path)
-    path = '/sys/block/{0}/queue/rotational'.format(block)
-    try:
-        with open(path) as fp:
-            flag = fp.read().strip() == "0"
-
-    except (IOError, OSError):
-        flag = False
-
-    return flag
-
 def is_posix_ssd(path):
     block = _blkdevice(path) # might be "nvme0n1p2"
     # path = '/sys/block/{0}/queue/rotational'.format(block)
