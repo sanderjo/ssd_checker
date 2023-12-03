@@ -102,7 +102,7 @@ def is_osx_ssd(path):
     return flag
 
 
-def is_posix_ssd(path):
+def OLD_is_posix_ssd(path):
     block = _blkdevice(path)
     path = '/sys/block/{0}/queue/rotational'.format(block)
     try:
@@ -114,6 +114,25 @@ def is_posix_ssd(path):
 
     return flag
 
+def is_posix_ssd(path):
+    block = _blkdevice(path) # might be "nvme0n1p2"
+    # path = '/sys/block/{0}/queue/rotational'.format(block)
+    flag = False
+    for path in glob("/sys/block/*/queue/rotational"):
+        disk = path.split('/')[3] # bare disk name, like "nvme0n1"
+        if block.find(disk) == 0:
+            # yes, block is on disk
+            # now find if that disk is rotational or not
+            try:
+                with open(path) as fp:
+                    flag = fp.read().strip() == "0"
+                    break # done
+            except (IOError, OSError):
+                flag = False
+
+    return flag
+
+
 
 def is_ssd(path):
     if os.name == 'nt':
@@ -124,3 +143,12 @@ def is_ssd(path):
         _is_ssd = is_posix_ssd
 
     return _is_ssd(path)
+
+if __name__ == "__main__":
+	print("Starting")
+	import sys
+	try:
+		my_dir = sys.argv[1]
+	except:
+		my_dir = "~"
+	print(my_dir, "is a SSD or not:", is_ssd(my_dir))
